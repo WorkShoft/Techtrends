@@ -15,6 +15,8 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 RUN rm database.db
 RUN python init_db.py
+# Expose is just informative, you will need to expose the port later anyway
+EXPOSE 3111
 # provide a command to run on container start.
 # For example, start the `app.py` application.
 CMD [ "python", "app.py" ]
