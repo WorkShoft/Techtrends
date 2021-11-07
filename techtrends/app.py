@@ -57,7 +57,7 @@ def post(post_id):
     update_query_statistics()
     post = get_post(post_id)
     if post is None:
-        app.logger.info("Article Not Found")
+        app.logger.error("Article Not Found")
         return render_template('404.html'), 404
     else:
         return render_template('post.html', post=post)
