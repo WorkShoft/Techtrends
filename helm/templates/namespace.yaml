@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Namespace
 metadata: 
-    name: sandbox
+    name: {{ .Values.namespace.name }}
     labels: 
-      name: sandbox
+      name: {{ .Values.namespace.name }}
 
 
 
