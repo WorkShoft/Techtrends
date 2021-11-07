@@ -25,8 +25,8 @@ spec:
           hostPort: {{ .Values.service.port }}
         resources:
           requests:
-            memory: {{ .Values.resources.request.memory }}
-            cpu: {{ .Values.resources.request.cpu }}
+            memory: {{ .Values.resources.requests.memory }}
+            cpu: {{ .Values.resources.requests.cpu }}
           limits:
             memory: {{ .Values.resources.limits.memory }}
             cpu: {{ .Values.resources.limits.cpu }}
