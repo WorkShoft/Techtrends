@@ -1,5 +1,7 @@
 apiVersion: v1
-namespace: prod
+appName: techtrends
+namespace:
+  name: prod
 service:
   port: 7111
   targetPort: 3111

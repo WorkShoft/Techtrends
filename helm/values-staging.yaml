@@ -1,5 +1,7 @@
 apiVersion: v1
-namespace: staging
+appName: techtrends
+namespace:
+  name: staging
 service:
   port: 5111
   targetPort: 3111
