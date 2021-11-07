@@ -6,6 +6,7 @@ service:
   port: 7111
   targetPort: 3111
   protocol: TCP
+  kind: ClusterIP
 image:
   repository: techtrends
   tag: latest
