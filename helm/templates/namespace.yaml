@@ -4,6 +4,3 @@ metadata:
     name: {{ .Values.namespace.name }}
     labels: 
       name: {{ .Values.namespace.name }}
-
-
-

@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: techtrends
+  name: {{ .Values.appName }}
   namespace: {{ .Values.namespace.name }}
 spec:
   replicas: {{ .Values.replicaCount }}
@@ -21,8 +21,8 @@ spec:
         name: techtrends
         ports:
         - name: liveness-port
-          containerPort: 3111
-          hostPort: 7111
+          containerPort: {{ .Values.containerPort }}
+          hostPort: {{ .Values.service.port }}
         resources:
           requests:
             memory: "64Mi"
