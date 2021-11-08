@@ -8,6 +8,7 @@ service:
   protocol: TCP
   kind: ClusterIP
 image:
+  author: workshoft
   repository: techtrends
   tag: latest
   pullPolicy: Always

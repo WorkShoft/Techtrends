@@ -16,13 +16,12 @@ spec:
         tag: {{ .Values.image.tag }}
     spec:
       containers:        
-      - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+      - image: {{ .Values.image.author }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: {{ .Values.appName }}
         ports:
         - name: liveness-port
           containerPort: {{ .Values.containerPort }}
-          hostPort: {{ .Values.service.port }}
         resources:
           requests:
             memory: {{ .Values.resources.requests.memory }}
